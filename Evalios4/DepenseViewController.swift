@@ -49,7 +49,7 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = UITableViewCell()
         let valeur: String = String(resultsController.object(at: indexPath).valeur) + "€"
-        cell.textLabel?.text = (resultsController.object(at: indexPath).nom!) + valeur
+        cell.textLabel?.text = (resultsController.object(at: indexPath).nom!) + "                               " + valeur
          
         return cell
         /*
