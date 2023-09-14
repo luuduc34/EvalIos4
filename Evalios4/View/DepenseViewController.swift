@@ -41,6 +41,7 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         depenseTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "CustomTableViewCell")
     }
+    // MARK: - Tableview
     // gère la tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsController.sections?[section].numberOfObjects ?? 0
@@ -49,12 +50,7 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let depense = resultsController?.object(at: indexPath)
         let customCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        /*
-        let cell = UITableViewCell()
-        let valeur: String = String(resultsController.object(at: indexPath).valeur) + "€"
-        cell.textLabel?.text = (resultsController.object(at: indexPath).nom!) + "                               " + valeur
-         
-        return cell*/
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy" // Format de date souhaité
 
@@ -64,6 +60,7 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         customCell.dateLabel.text = dateString
         customCell.depenseLabel.text = depense?.nom
         customCell.valeurLabel.text = valeur + " €"
+        
         return customCell
     }
     
@@ -82,6 +79,16 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    // gère le click de la cellule
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let datataObject = resultsController.object(at: indexPath)
+        
+        if let detailViewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+            detailViewController.passDataObject = datataObject
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+    // MARK: - Update tableview
     // gère l'écoute et la mise à jour auto de la tableview (catégories)
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {

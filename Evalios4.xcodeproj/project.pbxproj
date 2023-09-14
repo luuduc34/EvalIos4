@@ -24,6 +24,8 @@
 		654AF0F92AB2F03000926D19 /* AddDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654AF0F82AB2F03000926D19 /* AddDepenseViewController.swift */; };
 		654AF0FC2AB30CCB00926D19 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654AF0FA2AB30CCB00926D19 /* CustomTableViewCell.swift */; };
 		654AF0FD2AB30CCB00926D19 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654AF0FB2AB30CCB00926D19 /* CustomTableViewCell.xib */; };
+		654AF1002AB3379800926D19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654AF0FF2AB3379800926D19 /* DetailViewController.swift */; };
+		654AF1032AB33D4E00926D19 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 654AF1022AB33D4E00926D19 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,7 @@
 		654AF0F82AB2F03000926D19 /* AddDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepenseViewController.swift; sourceTree = "<group>"; };
 		654AF0FA2AB30CCB00926D19 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		654AF0FB2AB30CCB00926D19 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		654AF0FF2AB3379800926D19 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654AF1032AB33D4E00926D19 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +132,7 @@
 				654AF0FB2AB30CCB00926D19 /* CustomTableViewCell.xib */,
 				654AF0F12AB2ED0900926D19 /* DepenseViewController.swift */,
 				654AF0F32AB2ED1700926D19 /* SectionViewController.swift */,
+				654AF0FF2AB3379800926D19 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +153,9 @@
 			dependencies = (
 			);
 			name = Evalios4;
+			packageProductDependencies = (
+				654AF1022AB33D4E00926D19 /* AlamofireImage */,
+			);
 			productName = Evalios4;
 			productReference = 654AF0CD2AB2EAC900926D19 /* Evalios4.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 654AF0C42AB2EAC900926D19;
+			packageReferences = (
+				654AF1012AB33D4E00926D19 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 654AF0CE2AB2EAC900926D19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,6 +228,7 @@
 				654AF0EE2AB2EC1D00926D19 /* SectionDepense+CoreDataProperties.swift in Sources */,
 				654AF0D32AB2EAC900926D19 /* SceneDelegate.swift in Sources */,
 				654AF0FC2AB30CCB00926D19 /* CustomTableViewCell.swift in Sources */,
+				654AF1002AB3379800926D19 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		654AF1012AB33D4E00926D19 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		654AF1022AB33D4E00926D19 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 654AF1012AB33D4E00926D19 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		654AF0E42AB2EB2700926D19 /* Depense.xcdatamodeld */ = {
