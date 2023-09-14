@@ -78,18 +78,14 @@
 		654AF0CF2AB2EAC900926D19 /* Evalios4 */ = {
 			isa = PBXGroup;
 			children = (
+				654AF0FE2AB3337900926D19 /* View */,
 				654AF0F52AB2EDE600926D19 /* Data */,
 				654AF0F02AB2EC3A00926D19 /* Section */,
 				654AF0EF2AB2EC3100926D19 /* Depense */,
 				654AF0D02AB2EAC900926D19 /* AppDelegate.swift */,
-				654AF0F82AB2F03000926D19 /* AddDepenseViewController.swift */,
 				654AF0D22AB2EAC900926D19 /* SceneDelegate.swift */,
 				654AF0D42AB2EAC900926D19 /* ViewController.swift */,
 				654AF0D62AB2EAC900926D19 /* Main.storyboard */,
-				654AF0FA2AB30CCB00926D19 /* CustomTableViewCell.swift */,
-				654AF0FB2AB30CCB00926D19 /* CustomTableViewCell.xib */,
-				654AF0F12AB2ED0900926D19 /* DepenseViewController.swift */,
-				654AF0F32AB2ED1700926D19 /* SectionViewController.swift */,
 				654AF0D92AB2EACA00926D19 /* Assets.xcassets */,
 				654AF0DB2AB2EACA00926D19 /* LaunchScreen.storyboard */,
 				654AF0DE2AB2EACA00926D19 /* Info.plist */,
@@ -122,6 +118,18 @@
 				654AF0F62AB2EDFB00926D19 /* DataManager.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		654AF0FE2AB3337900926D19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				654AF0F82AB2F03000926D19 /* AddDepenseViewController.swift */,
+				654AF0FA2AB30CCB00926D19 /* CustomTableViewCell.swift */,
+				654AF0FB2AB30CCB00926D19 /* CustomTableViewCell.xib */,
+				654AF0F12AB2ED0900926D19 /* DepenseViewController.swift */,
+				654AF0F32AB2ED1700926D19 /* SectionViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
