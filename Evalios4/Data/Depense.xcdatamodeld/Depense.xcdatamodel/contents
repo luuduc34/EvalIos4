@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G90" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Depense" representedClassName="Depense" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="nom" attributeType="String"/>
+        <attribute name="valeur" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="sectionDepense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SectionDepense" inverseName="depenses" inverseEntity="SectionDepense"/>
+    </entity>
+    <entity name="SectionDepense" representedClassName="SectionDepense" syncable="YES">
+        <attribute name="nom" optional="YES" attributeType="String"/>
+        <relationship name="depenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="sectionDepense" inverseEntity="Depense"/>
+    </entity>
+</model>

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  EvalIos4
+//  Evalios4
 //
 //  Created by Duc Luu on 14/09/2023.
 //
@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         return true
     }
 
