@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dépenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j67-8n-QdQ">
-                                <rect key="frame" x="20" y="103" width="159" height="41"/>
+                                <rect key="frame" x="20" y="103" width="353" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,6 +67,7 @@
                         <constraints>
                             <constraint firstItem="X7b-LW-eeR" firstAttribute="trailing" secondItem="1Nz-Ba-Dqs" secondAttribute="trailing" id="GNR-b7-WtC"/>
                             <constraint firstItem="1Nz-Ba-Dqs" firstAttribute="leading" secondItem="X7b-LW-eeR" secondAttribute="leading" id="GPU-yo-Ahl"/>
+                            <constraint firstItem="X7b-LW-eeR" firstAttribute="trailing" secondItem="j67-8n-QdQ" secondAttribute="trailing" constant="20" id="Kas-zd-iSQ"/>
                             <constraint firstItem="1Nz-Ba-Dqs" firstAttribute="top" secondItem="j67-8n-QdQ" secondAttribute="bottom" id="PJe-zI-2nV"/>
                             <constraint firstItem="j67-8n-QdQ" firstAttribute="top" secondItem="X7b-LW-eeR" secondAttribute="top" id="Qxz-w9-nCO"/>
                             <constraint firstItem="X7b-LW-eeR" firstAttribute="bottom" secondItem="1Nz-Ba-Dqs" secondAttribute="bottom" id="dfo-Tl-dVR"/>
@@ -74,7 +75,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kHa-9h-Dy6">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="oQW-dZ-QdT">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="oQW-dZ-QdT">
                             <connections>
                                 <action selector="ajoutBtn" destination="fb9-Oa-YNv" id="ZgR-Lf-x2X"/>
                             </connections>
@@ -96,8 +97,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXT-B2-vMM">
-                                <rect key="frame" x="20" y="103" width="139" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXT-B2-vMM">
+                                <rect key="frame" x="20" y="103" width="353" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -111,6 +112,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AXT-B2-vMM" firstAttribute="top" secondItem="AH0-8g-7LR" secondAttribute="top" id="GLn-Md-X8O"/>
+                            <constraint firstItem="AH0-8g-7LR" firstAttribute="trailing" secondItem="AXT-B2-vMM" secondAttribute="trailing" constant="20" id="HGB-EF-Iue"/>
                             <constraint firstItem="2jM-D7-Vbr" firstAttribute="top" secondItem="AXT-B2-vMM" secondAttribute="bottom" id="PIu-96-a5b"/>
                             <constraint firstItem="AH0-8g-7LR" firstAttribute="trailing" secondItem="2jM-D7-Vbr" secondAttribute="trailing" id="VBc-fJ-OX9"/>
                             <constraint firstItem="AH0-8g-7LR" firstAttribute="bottom" secondItem="2jM-D7-Vbr" secondAttribute="bottom" id="XgW-pK-m7Q"/>
@@ -119,7 +121,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6HG-uJ-eeh">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="YWW-bk-pjq">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="YWW-bk-pjq">
                             <connections>
                                 <action selector="ajoutSectionBtn:" destination="Z5T-L9-Kfg" id="dHn-ng-epE"/>
                             </connections>

@@ -37,6 +37,9 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         depenseTableView.dataSource = self
         depenseTableView.delegate = self // on doit gerder celui ci pour le click sur la cellule
         resultsController.delegate = self // on doit garder celui ci pour la mise a jour auto de la tableview
+        // lier le nib avec la customCell
+        depenseTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "CustomTableViewCell")
     }
     // gère la tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,19 +47,24 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //let customCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        
+        let depense = resultsController?.object(at: indexPath)
+        let customCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        /*
         let cell = UITableViewCell()
         let valeur: String = String(resultsController.object(at: indexPath).valeur) + "€"
         cell.textLabel?.text = (resultsController.object(at: indexPath).nom!) + "                               " + valeur
          
-        return cell
-        /*
-        let depense = resultsController?.objects?[indexPath.row]
-        customCell.
-        customCell.
-        return customCell*/
+        return cell*/
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy" // Format de date souhaité
+
+        let date = depense?.date
+        let dateString = dateFormatter.string(from: date!)
+        let valeur: String = String(depense!.valeur)
+        customCell.dateLabel.text = dateString
+        customCell.depenseLabel.text = depense?.nom
+        customCell.valeurLabel.text = valeur + " €"
+        return customCell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
